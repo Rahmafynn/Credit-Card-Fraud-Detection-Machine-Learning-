@@ -9,7 +9,18 @@ accuracy a completely misleading metric.
 ## Dataset
 - **Source:** Credit Card Fraud Detection — Kaggle (ULB Machine Learning Group)
 - **Size:** 284,807 transactions | 31 columns
-- **Fraud Rate:** 0.17% — 492 fraud cases out of 284,807 transactions
+
+## Pipeline Architecture
+The pipeline is built with `imblearn.pipeline.Pipeline` — not sklearn's standard 
+Pipeline. This ensures SMOTE only ever activates on training folds, never on 
+test data, making data leakage structurally impossible.
+
+Two pipelines were built:
+- **Linear Pipeline:** StandardScaler → SMOTE → Logistic Regression
+- **Ensemble Pipeline:** SMOTE → Random Forest
+
+Both were tuned using GridSearchCV with 5-Fold StratifiedKFold — preserving 
+the 577:1 class ratio across every fold and every hyperparameter combination.
 
 ## What This Project Demonstrates
 - Handling extreme class imbalance using SMOTE
@@ -31,10 +42,7 @@ in false alarms while maintaining strong fraud detection recall.
 Python | Pandas | Scikit-learn | Imbalanced-learn | Matplotlib
 
 ## How to Run
-```bash
-git clone https://github.com/Rahmafynn/DecodeLabs-Internship.git
-pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
-```
+
 Open `fraud_detection.ipynb` in Jupyter Notebook and run all cells.
 
 ## Author
