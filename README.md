@@ -43,7 +43,7 @@ Python | Pandas | Scikit-learn | Imbalanced-learn | Matplotlib
 
 ## How to Run
 
-Open `fraud_detection.ipynb` in Jupyter Notebook and run all cells.
+Open `fraud_detection.ipynb` in Jupyter Notebook and run all cells. 
 
 ## Author
 Rahma — Data Science Intern, DecodeLabs Batch 2026
