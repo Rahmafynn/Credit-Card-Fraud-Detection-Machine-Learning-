@@ -1,4 +1,4 @@
-# DecodeLabs Data Science Internship — Project 2: Fraud Detection Pipeline
+ Fraud Detection Pipeline
 
 ## Overview
 A fraud detection pipeline built on 284,807 real-world credit card transactions.
@@ -46,4 +46,4 @@ Python | Pandas | Scikit-learn | Imbalanced-learn | Matplotlib
 Open `fraud_detection.ipynb` in Jupyter Notebook and run all cells. 
 
 ## Author
-Rahma — Data Science Intern, DecodeLabs Batch 2026
+Rahma — Data Science 
